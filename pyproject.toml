@@ -1,0 +1,13 @@
+[project]
+name = "novacomposecheck"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = ["pyyaml>=6,<7","typer>=0.16,<1"]
+[project.scripts]
+novacomposecheck = "novacomposecheck:app"
+[tool.hatch.build.targets.wheel]
+packages = ["src/novacomposecheck"]
+license = {text = "Apache-2.0"}
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
